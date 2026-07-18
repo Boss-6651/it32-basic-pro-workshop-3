@@ -1,9 +1,16 @@
 total = 0 
 ร้านที่เก็บแล้ว = 0
-shop = int(input("จำนวนร้าน: "))
+target_money = int(input("Enter money: "))
 
-for i in range(shop):
-    money = int(input(f"ร้านที่{i+1}: "))
-    while total < 50000:
-        total = total + money
-print(to
+while True:
+    if total < 50000:
+        income_money = int(input("Enter income money: "))
+        total += income_money
+        ร้านที่เก็บแล้ว += 1
+
+    else:
+        break
+
+print(f"สรุปเก็บเงินไปทั้งหมด {total} เก็บไป {ร้านที่เก็บแล้ว} ร้าน")
+
+
